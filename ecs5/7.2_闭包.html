@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//闭包
+		//指有权访问另一个函数作用域的变量的函数
+	function dome(){
+		var n=0;
+		return function (){
+			n++;
+			console.log(n)
+		}
+	}
+	var test = dome();
+	test();
+	test();
+	test();
+	test()
+
+</script>

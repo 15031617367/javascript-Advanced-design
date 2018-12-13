@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function componnet1(){
+		this.arr = ["张三","李四"]
+	}
+	function component2(){
+
+	}
+
+	component2.prototype = new componnet1();
+
+	var test = new component2();
+	var test2 = new component2();
+	test.arr[2]="王五";
+	console.log(test.arr,test2.arr)
+	var test3 = new componnet1();
+	console.log(test3.arr)
+
+</script>

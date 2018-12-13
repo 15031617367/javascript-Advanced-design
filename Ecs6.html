@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ecs6 测试代码</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	//class继承
+	class Animal{
+		constructor(name){
+			this.name = "aniam"
+		};
+		getName(){
+			return this.name
+		}
+	};
+
+	class Cat extends Animal{
+		constructor(){
+			super()
+			this.name = "cat"
+		};
+
+	};
+
+	let animal = new Animal();
+	let cat = new Cat();
+
+	//bind
+	this.a = 1;
+	var module = {
+		a:2,
+		getA:function(){
+			return this.a
+		}
+	};
+	// test在外部调用，此时的this指向了全局
+	var test = module.getA;
+	// 再把testA方法绑定到module环境上
+	var testA = test.bind(module);
+
+	//
+
+	
+
+
+
+
+	
+
+
+
+
+</script>

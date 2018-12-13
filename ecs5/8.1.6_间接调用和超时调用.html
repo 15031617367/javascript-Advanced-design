@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//间歇调用
+	// var id = setTimeout(()=>{
+	// 	console.log("定时器启动")
+	// },1000)
+	// console.log(id)
+	// clearTieout(id) //取消定时器
+
+	//超时调用
+	var num = 0;
+	var max = 10;
+	var init = null;
+	function setnumber(){
+		num++;
+		if(num<max){
+			console.log(num)
+		}else{
+			console.log("停止");
+			clearInterval(init)//停止定时器
+		}
+		
+	}
+	init = setInterval(setnumber,500);
+
+
+</script>

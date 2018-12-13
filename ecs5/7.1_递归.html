@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//递归的含义
+		//自己调用自己
+	function component1(num){
+		if(num<=1){
+			return 1
+		}else{
+			console.log(num)
+			return num * arguments.callee(num-1)
+		}
+	}
+
+	console.log(component1(4))
+
+</script>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function Parent(school,className){
+		this.school = school;
+		this.className = className;
+		this.arr = ["张三","李四"]
+	}
+	Parent.prototype = {
+		constructor:Parent,
+		sayName(){
+			console.log(this.arr)
+		}
+	}
+
+	var child1 = new Parent("一中","一班");
+	var child2 = new Parent("一中","二班");
+	child1.arr.push("王五");
+	child2.arr.push("赵六");
+	child1.sayName();
+	child2.sayName();
+
+	
+
+
+
+</script>

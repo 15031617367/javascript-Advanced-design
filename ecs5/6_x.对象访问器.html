@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ecs5</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	//访问器
+	let obj = {
+		_date : 2016,
+		value : 4
+	}
+	Object.defineProperty(obj,"date",{
+		get(){
+			return this._date
+		},
+		set(){
+			this.value = 11
+		}
+	});
+	obj.date = 2018;
+	console.log(obj.date);
+	console.log(obj.value);
+</script>

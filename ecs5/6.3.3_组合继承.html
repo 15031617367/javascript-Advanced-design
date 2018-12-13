@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		
+	</div>
+</body>
+</html>
+<script>
+	function Component1(name){
+		this.name = name;
+		this.arrCom1 = ['张三','李四']; 
+	};
+	Component1.prototype.sayName = function(){
+		return this.name;
+	}
+	
+
+	function Component2(name,age){
+		//集成了component
+		Component1.call(this,name);
+		this.age = age;
+	}
+	Component2.prototype = new Component1();
+	Component2.prototype.constructor = Component2;
+	Component2.prototype.sayAge = function(){
+		return this.age
+	}
+
+	var test1 = new Component2("王五",23);
+	test1.arrCom1.push("赵六");
+	console.log(test1.arrCom1);
+	console.log(test1.sayName());
+	console.log(test1.sayAge());
+
+	var test2 = new Component2("admin",22);
+	test2.arrCom1.push("uesr");
+	console.log(test2.arrCom1);
+	console.log(test2.sayName());
+	console.log(test2.sayAge());
+
+	
+
+
+</script>
